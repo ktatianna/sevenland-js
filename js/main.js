@@ -6,7 +6,7 @@ const products = [
         id: 1,
         nombre: "Kalanchoe",
         precio: 10000,
-        imagen: "producto1.png",
+        imagen: "producto1.PNG",
         descripcion:
             "El kalanchoe es, sin duda, una planta idónea para la decoración de espacios interiores y exteriores. Con colores exóticos como el rojo, fucsia, naranja y amarillo, y unas hojas carnosas que le ayudan a dosificar el agua.",
     },
@@ -14,7 +14,7 @@ const products = [
         id: 2,
         nombre: "Cactus",
         precio: 12000,
-        imagen: "producto2.png",
+        imagen: "producto2.PNG",
         descripcion:
             "Debido a que están preparados naturalmente para almacenar agua en su estructura de tallos robustos y espinosos, los cactus se han convertido en el ornamento predilecto para espacios exteriores e interiores.",
     },
