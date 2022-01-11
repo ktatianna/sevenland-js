@@ -22,7 +22,7 @@ const products = [
         id: 3,
         nombre: "Crassula Morgan",
         precio: 20100,
-        imagen: "producto3.png",
+        imagen: "producto3.PNG",
         descripcion:
             "Coloca esta crassula en un lugar donde reciba mucha luz durante todo el año y, si puede ser, en el que circule aire. ¡Debe resguardarse del frío extremo! Poco riego. Esta planta no necesita mucha agua.",
     },
@@ -30,7 +30,7 @@ const products = [
         id: 4,
         nombre: "Richodiadema Densum",
         precio: 6000,
-        imagen: "producto4.png",
+        imagen: "producto4.PNG",
         descripcion:
             "Es una planta de crecimiento lento. Desarrolla tallos rastreros, irregulares y leñosos no excesivamente largos muy ramificados desde la base formando masas vegetales muy tupidas de poca altura, de cinco a diez centímetros.",
     },
@@ -38,7 +38,7 @@ const products = [
         id: 5,
         nombre: "Carnivora",
         precio: 18000,
-        imagen: "producto5.png",
+        imagen: "producto5.PNG",
         descripcion:
             "Obtiene parte o la mayoría de sus necesidades nutricionales mediante la captura y el consumo de protozoos y animales, especialmente insectos .",
     },
@@ -46,7 +46,7 @@ const products = [
         id: 6,
         nombre: "Astrophytum Myriostigmas",
         precio: 11000,
-        imagen: "producto6.png",
+        imagen: "producto6.PNG",
         descripcion:
             "Planta de color verde brillante, sin espinas, por lo general solitaria, suelen tener cinco costillas, aunque pueden variar de 3 a 10 y su epidermis esta cubierta de puntos de color blanco grisáceo.",
     },
