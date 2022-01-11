@@ -21,21 +21,28 @@
 .titulo-sevenland:hover{
     color:var(--main-color)
 }
- .nav div a img {
 
- } 
-.nav-link{
-    color: white;
-    font-weight: 900;
-}
-.nav-link:hover { 
-    color:var(--main-color);
+.link-nav {
+    text-decoration: none;
+    color: rgb(221, 217, 217);
+    font-size: 18px;
 }
 
-.navbar-toggler-icon{
-    color: white;
+.active-nav{
+    color:white;
 }
 
+.link-nav:hover {
+    text-decoration: none;
+    color: #a4949a;
+    font-size: 18px;
+    
+}
+.item-nav { 
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
 
 
 .banner img{ 
@@ -45,6 +52,13 @@
     
 }
 /* Footer */
+.icon-cart{
+    padding: 6px;
+
+}
+.icon-cart:hover{
+    background-color: var(--main-color);
+}
 
 footer { 
     padding-top: 60px;

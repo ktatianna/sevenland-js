@@ -52,7 +52,9 @@ const products = [
     },
 ];
 
+//Carrito de productos 
 let cart = []; 
+
 //Formato precios 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -60,12 +62,17 @@ const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 0
 })
 
-//añadir productos al carrito de compras
 
+//añadir productos al carrito de compras
 function shoppingCart(id) { 
-   const resultado = products.find( product => product.id == id );
+    //añadir elementos al carrito
+    const resultado = products.find( product => product.id == id );
     cart.push(resultado);
     console.log(cart); 
+
+    //calcular total del carrito
+    const precioTotal = cart.map(product => product.precio).reduce((prev, curr) => prev + curr, 0);
+    console.log("Total: " +precioTotal);
 }
 
 function showProducts() {
@@ -79,12 +86,11 @@ function showProducts() {
                 <div class="card-body">
                     <h5 class="card-title">${product.nombre}</h5>
                     <p class="card-price">${formatter.format(product.precio)} c/u </p>
-                    <a onclick="shoppingCart(${product.id})" href="#" class="btn btn-card">Añadir al carrito</a>
+                    <button onclick="shoppingCart(${product.id})" href="#" class="btn btn-card">Añadir al carrito</button>
                 </div>
                 </div>
             </div> 
             `
-
             main.appendChild(productsHTML);
     })
 }
