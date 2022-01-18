@@ -1,8 +1,12 @@
+//Carrito de productos 
+let cart = [];
+
 //añadir productos al carrito de compras
 function shoppingCart(id) {
     //añadir elementos al carrito
     const resultado = products.find(product => product.id == id);
     cart.push(resultado);
+    console.log(cart)
     storage(cart); 
    calculateTotal(); 
 }

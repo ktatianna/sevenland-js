@@ -1,8 +1,6 @@
 //variables para el DOM
 const main = document.getElementById('items');
 
-//Carrito de productos 
-let cart = [];
 
 //Formato precios 
 const formatter = new Intl.NumberFormat('en-US', {
