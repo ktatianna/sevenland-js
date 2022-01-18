@@ -195,3 +195,15 @@ p{
     margin-top: 6em;
 }
 
+/* Estilo del carrito */
+.containerCart{ 
+    display: flex;
+    align-items: center;
+    
+    margin-top: 6em;
+    flex-direction: column;
+}
+
+.cart-table{
+    max-width: 800px;
+}

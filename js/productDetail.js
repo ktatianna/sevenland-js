@@ -22,7 +22,7 @@ window.onload = function showProductDetail() {
           <div class="col-md-5">
             <div class="card-body">
                 <h5 class="card-title">${result.nombre}</h5>
-                <p class="card-price">${result.precio} c/u </p>
+                <p class="card-price">${formatter.format(result.precio)} c/u </p>
                 <p class="card-text">${result.descripcion}</p>
                 <button class="btn btn-card" onclick="shoppingCart(${result.id})" >Añadir al carrito</button>
             </div>

@@ -19,3 +19,4 @@ function calculateTotal(){
     const precioTotal = cart.map(product => product.precio).reduce((prev, curr) => prev + curr, 0);
     console.log("Total: " + precioTotal);
 }
+
