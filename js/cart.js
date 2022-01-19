@@ -6,13 +6,24 @@ function shoppingCart(id) {
     const resultado = products.find(product => product.id == id);
     cart.push(resultado);
     storage(resultado);
-    calculateTotal();
 }
+
+//eliminar productos del carrito 
+function deleteItem(id) { 
+    var storage = JSON.parse(localStorage.getItem("productsInCart"))
+    console.log(storage)
+    const resultado = storage.filter(product => product.id !== id)
+    console.log(resultado)
+    localStorage.setItem("productsInCart", JSON.stringify(resultado));
+    location.reload();
+}
+
 
 //calcular total del carrito
 function calculateTotal(){ 
-    const precioTotal = cart.map(product => product.precio).reduce((prev, curr) => prev + curr, 0);
-    console.log("Total: " + precioTotal);
+    let precioTotal = JSON.parse(localStorage.getItem("productsInCart")).map(product => product.precio).reduce((prev, curr) => prev + curr, 0);
+    console.log("Total: " + precioTotal); 
+    return precioTotal; 
 }
 
 function storage(cart) {
