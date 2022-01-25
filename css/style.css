@@ -66,7 +66,11 @@ footer {
     background-size: cover;
 	background-color: #ddd;
 	height: 360px;
-    
+   /* position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    */
 }
 
  footer h2 { 
@@ -207,3 +211,68 @@ p{
 .cart-table{
     max-width: 800px;
 }
+
+/* estilo de inicio de sesión y registro */ 
+
+.form-login {
+    background-color: var(--color-3);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: white;
+    border-radius: 10px;
+    margin-top: 6em;
+}
+
+.form-login a {
+    text-decoration: none;
+    color: white;
+}
+
+.form-login a:hover {
+    color: var(--color-4);
+}
+
+.form-login h1 {
+    text-align: center;
+}
+
+.form-img {
+    background: url(../src/multimedia/img/fondo-formulario.jpg) center center;
+}
+
+.form-img-registro {
+    background: url(../src/multimedia/img/registro.jpg) center center;
+}
+
+
+.form-info {
+    padding: 4em;
+}
+
+.form-group {
+    padding: 1em;
+}
+
+form button {
+    text-align: center;
+}
+
+.enlace-registro {
+    text-align: center;
+}
+
+.btn-ingresar {
+    background-color: black;
+    color: white;
+}
+
+.btn-ingresar:hover { 
+    background-color: var(--color-4);
+}
+
+@media(max-width: 767px){
+	.form-img{
+        display: none;
+    }
+}
+
