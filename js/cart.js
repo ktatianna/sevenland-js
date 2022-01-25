@@ -3,19 +3,39 @@ let cart = [];
 
 //añadir productos al carrito de compras
 function shoppingCart(id) {
-    //añadir elementos al carrito
     const resultado = products.find(product => product.id == id);
     cart.push(resultado);
-    console.log(cart)
-    storage(cart); 
-   calculateTotal(); 
+    storage(resultado);
 }
 
-function storage(cart){ 
-    localStorage.setItem("productsInCart", JSON.stringify(cart));
+//eliminar productos del carrito 
+function deleteItem(id) { 
+    var storage = JSON.parse(localStorage.getItem("productsInCart"))
+    console.log(storage)
+    const resultado = storage.filter(product => product.id !== id)
+    console.log(resultado)
+    localStorage.setItem("productsInCart", JSON.stringify(resultado));
+    location.reload();
 }
+
+
 //calcular total del carrito
 function calculateTotal(){ 
-    const precioTotal = cart.map(product => product.precio).reduce((prev, curr) => prev + curr, 0);
-    console.log("Total: " + precioTotal);
+    let precioTotal = JSON.parse(localStorage.getItem("productsInCart")).map(product => product.precio).reduce((prev, curr) => prev + curr, 0);
+    console.log("Total: " + precioTotal); 
+    return precioTotal; 
+}
+
+function storage(cart) {
+    let storage = [];
+    if (!localStorage.getItem("productsInCart")) {
+        storage.push(cart)
+        localStorage.setItem("productsInCart", JSON.stringify(storage));
+        console.log(localStorage.getItem("productsInCart"))
+    } else {
+        storage = JSON.parse(localStorage.getItem("productsInCart"));
+        storage.push(cart)
+        localStorage.setItem("productsInCart", JSON.stringify(storage))
+        console.log(localStorage.getItem("productsInCart"))
+    }
 }

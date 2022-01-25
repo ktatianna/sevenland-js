@@ -2,28 +2,6 @@
 const main = document.getElementById('items');
 
 
-//Formato precios 
-const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 0
-})
-
-/*
-//añadir productos al carrito de compras
-function shoppingCart(id) {
-    //añadir elementos al carrito
-    const resultado = products.find(product => product.id == id);
-    cart.push(resultado);
-    console.log(cart);
-  //  sessionStorage.setItem("productsInCart", JSON.stringify(cart));
-
-    //calcular total del carrito
-    const precioTotal = cart.map(product => product.precio).reduce((prev, curr) => prev + curr, 0);
-    console.log("Total: " + precioTotal);
-}
-
-*/
 
 function ProductDetail(i) {
     location.href=`src/views/productDetail.html?id=${i}`;  
