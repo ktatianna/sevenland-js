@@ -129,7 +129,12 @@ footer li{
 	}
 }
 
-
+@media(max-width: 768px){
+    .card-productos{ 
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
 
 /* Fin del footer */
 
@@ -157,9 +162,7 @@ p{
 .titulo { 
     margin-top: 2em;
 }
-.card-productos{
-    margin: 2em 8em 2em 8em;
-}
+
 .card-title {
     font-size: 24px;
     font-family: 'Playfair Display', serif;
