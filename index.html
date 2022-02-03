@@ -77,13 +77,8 @@
           </ul>
           <div class="d-flex">
             <a class="navbar-brand  mb-0 h1 icon-cart" href="src/views/cart.html">
-                <img
-                  src="./src/multimedia/img/cart.png"
-                  alt=""
-                  width="30"
-                  height="30"
-                  class="d-inline-block align-text-top"
-                />
+              <span id="cartCounter" class="badge bg-danger"></span>
+              <img src="./src/multimedia/img/cart.png" alt="" width="30" height="30" class="d-inline-block align-text-top" />
             </a>
           </div>
         </div>
@@ -177,11 +172,16 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- JavaScript-->
     <script src="js/productsList.js"></script>
     <script src="js/main.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/formattedPrice.js"></script>
+
+
 
   </body>
 </html>

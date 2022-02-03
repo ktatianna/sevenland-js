@@ -7,7 +7,7 @@ function ProductDetail(i) {
     location.href=`src/views/productDetail.html?id=${i}`;  
 }
 
-window.onload = function showProducts() {
+function showProducts() {
     main.innerHTML = '';
     products.forEach(product => {
         const productsHTML = document.createElement('div');
@@ -26,5 +26,7 @@ window.onload = function showProducts() {
         main.appendChild(productsHTML);
     })
 }
+
+$(document).ready(showProducts)
 
 

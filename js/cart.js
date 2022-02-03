@@ -6,6 +6,7 @@ function shoppingCart(id) {
     const resultado = products.find(product => product.id == id);
     cart.push(resultado);
     storage(resultado);
+    Counter();
 }
 
 //eliminar productos del carrito 
@@ -15,7 +16,9 @@ function deleteItem(id) {
     const resultado = storage.filter(product => product.id !== id)
     console.log(resultado)
     localStorage.setItem("productsInCart", JSON.stringify(resultado));
+    Counter();
     location.reload();
+
 }
 
 
@@ -39,3 +42,13 @@ function storage(cart) {
         console.log(localStorage.getItem("productsInCart"))
     }
 }
+
+function Counter() {
+  console.log("hola, soy un counter");
+  let lengthCart = JSON.parse(localStorage.getItem("productsInCart")).length;
+  if (lengthCart > 0) {
+    $("#cartCounter").text(lengthCart);
+  }
+}
+
+$(document).ready(Counter)
