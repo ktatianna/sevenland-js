@@ -3,6 +3,7 @@ let alertLastName = document.getElementById("lastName-group");
 let alertEmail = document.getElementById("email-group");
 let alertPsw = document.getElementById("psw-group");
 
+let state = "Falló el registro";
 let boton = document.getElementById("btn-registro");
 boton.addEventListener("click", validarFormulario);
 
@@ -61,7 +62,27 @@ function validarFormulario() {
         }
     }
 
-    window.alert("Registro éxitoso");
-
-
+    state = "Registro éxitoso"
 } 
+
+$("#btn-registro").click(() => {
+  if (state == "Registro éxitoso") {
+    $.ajax({
+      method: "POST",
+      url: "https://jsonplaceholder.typicode.com/posts",
+      data: {
+        name: $("#form-name").val(),
+        lastname:  $("#form-lastname").val(),
+        email:  $("#form-email").val(),
+        psw: $("#form-pwd").val()
+      },
+      success: function (response) {
+        $("#form-registro").append(`<div><strong>${state} para:  ${response.name}</strong></div>`);
+      },
+      error: function (respuesta) {
+        $("#form-registro").append(`<div><strong>${state}</strong></div>`);
+      },
+    });
+  }
+});
+
